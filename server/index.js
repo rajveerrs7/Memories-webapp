@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
 app.use('/posts', postRoutes);
 
-const connectionURL = 'mongodb+srv://rajveerfootballrs7_db_user:rajveer8@cluster0.7mzzwmt.mongodb.net/'
+const connectionURL = 'mongodb+srv://<password>:<username>@cluster0.7mzzwmt.mongodb.net/'
 
 mongoose.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
